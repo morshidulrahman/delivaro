@@ -2,9 +2,17 @@ import { View, Text, TouchableOpacity, Image } from 'react-native'
 import React from 'react'
 import { AntDesign, EvilIcons } from '@expo/vector-icons';
 import { urlFor } from '../../sanity';
+import { useNavigation } from '@react-navigation/native';
+
 const ResturandCard = ({ id, image, title, short_desc, rating, address, dishes, log, lat, genre }) => {
+
+    const navigation = useNavigation()
     return (
-        <TouchableOpacity className="bg-white mr-3 rounded-sm">
+        <TouchableOpacity
+            onPress={() => {
+                navigation.navigate("Restaurant")
+            }}
+            className="bg-white mr-3 rounded-sm">
             <Image
                 source={{ uri: urlFor(image).url() }}
                 className="w-64 h-36"
