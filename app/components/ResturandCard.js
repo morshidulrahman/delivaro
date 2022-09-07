@@ -10,7 +10,9 @@ const ResturandCard = ({ id, image, title, short_desc, rating, address, dishes, 
     return (
         <TouchableOpacity
             onPress={() => {
-                navigation.navigate("Restaurant")
+                navigation.navigate("Restaurant", {
+                    id, image, title, short_desc, rating, address, dishes, log, lat, genre
+                })
             }}
             className="bg-white mr-3 rounded-sm">
             <Image
