@@ -91,7 +91,7 @@ const Busketscren = () => {
                             </Text>
                         </View>
                         <TouchableOpacity className="bg-[#00ccbb] mx-5 rounded-lg p-4"
-                            onPress={() => { navigation.navigate("busket") }}
+                            onPress={() => { navigation.navigate("prepscreen") }}
                         >
                             <Text className="text-lg font-bold text-center capitalize text-white ">place order</Text>
 
